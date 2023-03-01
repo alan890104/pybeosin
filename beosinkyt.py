@@ -3,7 +3,7 @@ import hashlib
 import json
 import os
 import time
-from typing import Dict, List, Any, TypeVar, Generic, Tuple
+from typing import Dict, List, Any
 import requests
 from dataclasses import dataclass
 from collections import OrderedDict
@@ -70,9 +70,6 @@ class AddrDetail:
 @dataclass(frozen=True)
 class TxDetail:
     pass
-
-
-T = TypeVar("T", MaliceData, SanctionData)
 
 
 class BeosinKYT:
