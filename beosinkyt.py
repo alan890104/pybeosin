@@ -184,19 +184,13 @@ if __name__ == "__main__":
     appSecret = os.getenv("APPSECRET")
     appRoot = os.getenv("APPROOT")
     API = BeosinKYT(appId=appId, appSecret=appSecret, appRoot=appRoot)
-    # result = API.getMaliciousAddr(
-    #     platform="eth",
-    #     address="0xb763afd03e7c4e6fd91d3e88ac941cf7c07a3898",
-    # )
-    # print(result)
-    # result = API.getSanctionedAddr(
-    #     platform="eth",
-    #     address="0x3cbded43efdaf0fc77b9c55f6fc9988fcc9b757d",
-    # )
-    # print(result)
-    result = API.getAddrDetail(
+    result = API.getMaliciousAddr(
         platform="eth",
-        currency="eth",
-        address="0x39cc5c33e49c6583f4ac321562236227b8641311",
+        address="0xb763afd03e7c4e6fd91d3e88ac941cf7c07a3898",
+    )
+    print(result)
+    result = API.getSanctionedAddr(
+        platform="eth",
+        address="0x3cbded43efdaf0fc77b9c55f6fc9988fcc9b757d",
     )
     print(result)
